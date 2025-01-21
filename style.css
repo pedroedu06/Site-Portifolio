@@ -1,54 +1,169 @@
+::after
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color:  #faf9f6;
-    font-family: arial;
+    background: linear-gradient(90deg, #2F4F4F, #000000);
+    font-family: Arial;
+    color: #ffffff;
+    margin: 50px;
+}
+
+.logo {
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 70px;
+}
+
+.contato {
+    margin: 0 15px;
+    padding: 10px 20px;
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contato:hover {
+    background-color: #185dc4;
+    transform: scale(1.05);
+}
+
+.navbar {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: #444;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); 
+    border-bottom: 3px solid #000000; 
+    width: 100%; 
+    padding: 15px 0; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+.navbar ul {
+    list-style: none;
+    margin: 0 15px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-header {
-    background-color: rgb(159, 90, 224);;
-    border-radius: 10px;
-    padding: 20px;
-}
-.tituloPrincipal {
-    text-align: center;
-    color: #faf9f6;
+.navbar ul:hover {
+    background-color: #555;
+    transform: scale(1.05);
 }
 
-.container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: left;
+body::after {
+    content: '';
+    display: block;
+    height: 80px; 
+}
+.redesociais{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
-h2, h3 {
-    padding: 5px;
-    margin-top: 10px;
-    color: rgb(159, 90, 224);
-}
-
-table {
+.git{
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s;
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+    position: relative;
+}
+.git:hover {
+    transform: scale(1.5);
 }
 
-table th, table td {
-    border: 1px solid rgb(159, 90, 224);
-    padding: 8px;
-    text-align: left;
+.linkedin{
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s;
+    width: 100%;
+    position: relative;
 }
-table th {
-    background-color: #f2f2f2;
+.linkedin:hover {
+    transform: scale(1.5);
 }
 
-ul {
-    list-style: disc;
-    padding-left: 20px;
+.insta{
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s;
+    width: 100%;
+    position: relative;
 }
+.insta:hover {
+    transform: scale(1.5);
+}
+
+.msg {
+    font-size: 50px;
+}
+
+h2{
+    font-size: 100px;
+}
+
+p{
+    font-size: 50px;
+}
+
+section{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 3s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 3s;
+}
+
+
+
 .fotoPedro {
-    width: 200px;
+    width: 350px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 7px 7px 7px;
+    box-shadow: 15px rgba(0, 0, 0, 0.6);
+    
+    position: relative;
+    left: -700px;
+    top: 20px;
+}
+
+.sobreMin {
+    transform: translate(200px, -500px);
+    
+    font-size: 30px;
+    max-width: 80%; 
+    margin: 0 auto; 
+    line-height: 1.5;
+    
 }
