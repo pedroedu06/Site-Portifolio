@@ -145,6 +145,54 @@ section{
     transition: all 3s;
 }
 
+.projetos {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    color: #000000;
+}
+
+.projetos p {
+    font-size: 40px;
+}
+
+.projetos h1 {
+    font-family: 50px;
+}
+
+.image {
+    width: 500px;
+    height: 550px;
+    margin-right: 1200px;
+    position: relative;
+}
+
+.image1 {
+    width: 500px;
+    height: 550px;
+    margin-right: 1200px;
+    top: 330px;
+    position: relative;
+}
+
+.image2 {
+    width: 500px;
+    height: 550px;
+    margin-right: -1150px;
+    top: -330px;
+    position: relative;
+}
+
+.image3 {
+    width: 500px;
+    height: 550px;
+    position: relative;
+    margin-right: -1200px;
+    top: -1680px;
+}
+
 
 
 .fotoPedro {
