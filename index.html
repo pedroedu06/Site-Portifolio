@@ -5,12 +5,17 @@
     <link rel="shortcut icon" type="x-icon" href="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <title>Curriculo</title>
 </head>
 <body>
     
     <nav class="navbar">
-        <span class="logo">Dev.</span>
+        <span class="logo"> Dev.</span>
         <ul><a href="#home" class="js-link">Home </a></ul>
         <ul><a href="#projetos" class="js-link">Projetos</a></ul>
         <ul><a href="#sobre" class="js-link">Sobre</a></ul>
@@ -23,6 +28,7 @@
 <section id="home" class="section">
     <div id="header">
         <h1 class="msg">Olá! Meu nome e Pedro Eduardo.</h1>
+        <p class="msg2">Bem vindo ao meu site!</p>
         <div class="redesociais">
         <ul onclick="github()"><img src="imagens/icons8-github-64.png" class="git"></ul>
         <ul onclick="insta()"><img src="imagens/icons8-instagram-64.png" alt="" class="insta"></ul>
@@ -32,30 +38,61 @@
 </section>
 
 <section class="hidden section" id="projetos">
+    <h2>Projetos</h2>
     <div class="projetos">
-        <h1>Projetos</h1>
-        <p>Front-End</p>
-        <div><img src="https://d5gag3xtge2og.cloudfront.net/producao/33418296/G/em_breve.jpg" alt="" class="image"></div>
-        <div><img src="https://d5gag3xtge2og.cloudfront.net/producao/33418296/G/em_breve.jpg" alt="" class="image1"></div>
-        <div><img src="https://d5gag3xtge2og.cloudfront.net/producao/33418296/G/em_breve.jpg" alt="" class="image2"></div>
-        <div><img src="https://d5gag3xtge2og.cloudfront.net/producao/33418296/G/em_breve.jpg" alt="" class="image3"></div>
-        <h1>Java</h1>
-        <div><img src="https://d5gag3xtge2og.cloudfront.net/producao/33418296/G/em_breve.jpg" alt="" class="image"></div>
-        <div><img src="https://d5gag3xtge2og.cloudfront.net/producao/33418296/G/em_breve.jpg" alt="" class="image1"></div>
-        <div><img src="https://d5gag3xtge2og.cloudfront.net/producao/33418296/G/em_breve.jpg" alt="" class="image2"></div>
-        <div><img src="https://d5gag3xtge2og.cloudfront.net/producao/33418296/G/em_breve.jpg" alt="" class="image3"></div>
-
-    </div>
+        <div>
+            <p>Projeto em produção</p>
+            <img src="https://www.umbuzeiro.pb.gov.br/images/IMAGENS/em_breve.jpg">
+            <button>Github</button>
+            <button>Ver demo</button>
+        </div>
+        <div>
+            <p>Projeto em produção</p>
+            <img src="https://www.umbuzeiro.pb.gov.br/images/IMAGENS/em_breve.jpg" > 
+            <button>Github</button>
+            <button>Ver demo</button>
+        </div>
+        <div>
+            <p>Projeto em produção</p>
+            <img src="https://www.umbuzeiro.pb.gov.br/images/IMAGENS/em_breve.jpg">
+            <button>Github</button>
+            <button>Ver demo</button>
+        </div>
 </section>
 
 <section class="hidden section" id="sobre">
     <h2>Sobre mim</h2>
-    <img src="imagens/foto perfilaasdad.jpg" alt="" class="fotoPedro">
+    <img src="imagens/foto perfilaasdad.jpg" class="fotoPedro">
     <p class="sobreMin">Olá! Meu nome e Pedro Eduardo e sou estudante em Engenharia de Software</p>
 </section>
 
 <section class="hidden section" id="interesses" >
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfJLPJv_9SKHfZijF2lPmLFR6SSBA39mix0A&s" alt="">
+    <h2>Interesses e Habilidades</h2>
+    <div class="habilits">
+        <div>
+            <p>Aqui estao algumas habilidades e interesses que eu tenho dentro da area da tecnologia, sempre aprendendo coisas novas e descobindo novas tecnologias.</p>
+        </div>
+        <img src="imagens/icons8-traço-100.png" alt="">
+        <h1>Habilidades:</h1> 
+        <div class="icons">
+            <img src="imagens/icons8-html-5-100.png">
+            <img src="imagens/icons8-css-100.png">
+            <img src="imagens/icons8-javascript-100.png">
+            <img src="imagens/icons8-react-96.png">
+            <img src="imagens/icons8-mysql-100.png">
+            <img src="imagens/icons8-github-100.png">
+            <img src="imagens/icons8-logo-java-coffee-cup-100.png">
+            <img src="imagens/icons8-visual-studio-100.png">
+        </div>
+        <h1>Interesses</h1>
+            <div class="icons">
+                <img src="imagens/icons8-android-studio-100.png">
+                <img src="imagens/icons8-kotlin-100.png">
+                <img src="imagens/icons8-ai-100.png">
+                <img src="imagens/icons8-php-100.png">
+            </div>
+            
+    </div>
 </section>
 
 <section class="hidden section" id="precos" >
@@ -65,8 +102,18 @@
 
 
 <section class="hidden section" id="contato" >
+    <h2>Contato</h2>
 
-    <h2>contato</h2>
+    <div class="form-message">
+        <h1 class="form-title">Entre em contato comigo!</h1>
+        <form action="https://formsubmit.co/pedro.nascimento182501@gmail.com" method="POST">
+        <input type="text" name="Nome" id="nome" placeholder="Nome" required>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="text" name="subject" placeholder="Assunto">
+        <textarea name="Mensagem" id="message" placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
 </section>
 
 </body>

@@ -7,10 +7,14 @@
 
 body {
     background: linear-gradient(90deg, #2F4F4F, #000000);
-    font-family: Arial;
+    padding: 1.5rem;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
     color: #ffffff;
     margin: 50px;
 }
+
+/*nav bar*/
 
 .logo {
     display: flex;
@@ -73,6 +77,9 @@ body::after {
     display: block;
     height: 80px; 
 }
+
+/*header*/
+
 .redesociais{
     display: flex;
     justify-content: center;
@@ -84,8 +91,8 @@ body::after {
     overflow: hidden;
     transition: 1s;
     width: 100%;
-    position: relative;
 }
+
 .git:hover {
     transform: scale(1.5);
 }
@@ -95,7 +102,7 @@ body::after {
     overflow: hidden;
     transition: 1s;
     width: 100%;
-    position: relative;
+    
 }
 .linkedin:hover {
     transform: scale(1.5);
@@ -106,18 +113,60 @@ body::after {
     overflow: hidden;
     transition: 1s;
     width: 100%;
-    position: relative;
+    
 }
 .insta:hover {
     transform: scale(1.5);
 }
 
 .msg {
-    font-size: 50px;
+    font-size: 4.5rem;
+    font-weight: 800;
 }
 
+.msg2 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+
+    border-right: 15px solid #f1e100;
+    white-space: nowrap;
+
+    width: 0ch;
+
+
+    overflow: hidden;
+    animation: mark .5s step-end infinite, write 6s steps(22, end), infinite;
+}
+
+@keyframes mark {
+
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes write {
+    
+    20% {
+        width: 20ch;
+    }
+    70% {
+        width: 20ch;
+    }
+    85%{
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+
 h2{
-    font-size: 100px;
+    font-size: 80px;
+    font-weight: 700;
 }
 
 p{
@@ -145,62 +194,60 @@ section{
     transition: all 3s;
 }
 
+/*Projetos*/
+
 .projetos {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6);
     width: 100%;
-    text-align: center;
     color: #000000;
+    display: flex;
+    max-width: 1460px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .projetos p {
-    font-size: 40px;
+    font-size: 20px;
+    color: #ffffff;
 }
 
 .projetos h1 {
-    font-family: 50px;
+    font-size: 40px;
 }
 
-.image {
-    width: 500px;
-    height: 550px;
-    margin-right: 1200px;
-    position: relative;
+.projetos img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+.projetos div  {
+    background-color: #FA8072;
+    height: 450px;
+    width: 400px;
+    margin: 47px;
+    border-radius: 10px;
+    border-style: solid;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.6);
 }
 
-.image1 {
-    width: 500px;
-    height: 550px;
-    margin-right: 1200px;
-    top: 330px;
-    position: relative;
-}
-
-.image2 {
-    width: 500px;
-    height: 550px;
-    margin-right: -1150px;
-    top: -330px;
-    position: relative;
-}
-
-.image3 {
-    width: 500px;
-    height: 550px;
-    position: relative;
-    margin-right: -1200px;
-    top: -1680px;
+.projetos button {
+    margin: 50px;
+    height: 50px;
+    width: 80px;
+    background-color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 
-
+/*sobre min*/
 .fotoPedro {
     width: 350px;
     height: auto;
     border-radius: 7px 7px 7px;
     box-shadow: 15px rgba(0, 0, 0, 0.6);
-    
     position: relative;
     left: -700px;
     top: 20px;
@@ -210,8 +257,109 @@ section{
     transform: translate(200px, -500px);
     
     font-size: 30px;
-    max-width: 80%; 
+    max-width: 100%; 
     margin: 0 auto; 
     line-height: 1.5;
     
 }
+
+/*habilits*/
+
+.habilits {
+    background-color: #ffffff;
+    max-width: 1400px;
+    color: #000000;
+    border-radius: 15px;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+}
+
+.habilits p {
+    font-size: 25px;
+    text-align: justify;
+}
+
+.habilits h1 {
+    font-size: 50px;
+}
+
+.icons {
+    margin: 34px;
+}
+
+/*contact*/
+
+.form-message  {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 1100px;
+    color: #000000;
+}
+
+.form-title {
+    padding: 20px 30px;
+    border-bottom: thin solid #ccc;
+}
+
+.form-message {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.form-message input,
+.form-message textarea {
+    width: calc(50% - 8px);
+    height: 40px;
+    border-radius: 8px;
+    border: thin solid #999;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-message input:hover,
+.form-message input:focus,
+.form-message textarea:hover,
+.form-message textarea:focus{
+    outline: none;
+    border-color: #555;
+    box-shadow: 0 0 0 0.3125rem #26344a;
+}
+
+.form-message input:first-child {
+    margin-right: 16px;
+}
+
+.form-message input[name=subject] {
+    width: 800px;
+}
+
+.form-message textarea {
+    width: 100%;
+    height: 200px;
+    padding: 16px;
+}
+
+.form-message button {
+    display: block;
+    border: none;
+    outline: none;
+    width: 180px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #531853;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-message button:hover, .form-message button:focus {
+    outline: none;
+    background-color: #a027a0;
+}
+
