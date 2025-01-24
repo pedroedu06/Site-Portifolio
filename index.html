@@ -5,7 +5,7 @@
     <link rel="shortcut icon" type="x-icon" href="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -33,7 +33,6 @@
         <ul onclick="github()"><img src="imagens/icons8-github-64.png" class="git"></ul>
         <ul onclick="insta()"><img src="imagens/icons8-instagram-64.png" alt="" class="insta"></ul>
         <ul onclick="linked()"><img src="imagens/icons8-linkedin-64.png" alt="" class="linkedin"></ul>
-        </div> 
     </div>
 </section>
 
@@ -43,21 +42,22 @@
         <div>
             <p>Projeto em produção</p>
             <img src="https://www.umbuzeiro.pb.gov.br/images/IMAGENS/em_breve.jpg">
-            <button>Github</button>
-            <button>Ver demo</button>
+            <button onclick="clickAlert()">Github</button>
+            <button onclick="clickAlert()">Ver demo</button>
         </div>
         <div>
             <p>Projeto em produção</p>
             <img src="https://www.umbuzeiro.pb.gov.br/images/IMAGENS/em_breve.jpg" > 
-            <button>Github</button>
-            <button>Ver demo</button>
+            <button onclick="clickAlert()">Github</button>
+            <button onclick="clickAlert()">Ver demo</button>
         </div>
         <div>
             <p>Projeto em produção</p>
             <img src="https://www.umbuzeiro.pb.gov.br/images/IMAGENS/em_breve.jpg">
-            <button>Github</button>
-            <button>Ver demo</button>
+            <button onclick="clickAlert()">Github</button>
+            <button onclick="clickAlert()">Ver demo</button>
         </div>
+    </div>
 </section>
 
 <section class="hidden section" id="sobre">
@@ -72,7 +72,7 @@
         <div>
             <p>Aqui estao algumas habilidades e interesses que eu tenho dentro da area da tecnologia, sempre aprendendo coisas novas e descobindo novas tecnologias.</p>
         </div>
-        <img src="imagens/icons8-traço-100.png" alt="">
+        <img src="imagens/icons8-traço-100.png">
         <h1>Habilidades:</h1> 
         <div class="icons">
             <img src="imagens/icons8-html-5-100.png">
@@ -81,7 +81,6 @@
             <img src="imagens/icons8-react-96.png">
             <img src="imagens/icons8-mysql-100.png">
             <img src="imagens/icons8-github-100.png">
-            <img src="imagens/icons8-logo-java-coffee-cup-100.png">
             <img src="imagens/icons8-visual-studio-100.png">
         </div>
         <h1>Interesses</h1>
@@ -90,14 +89,19 @@
                 <img src="imagens/icons8-kotlin-100.png">
                 <img src="imagens/icons8-ai-100.png">
                 <img src="imagens/icons8-php-100.png">
+                <img src="imagens/icons8-logo-java-coffee-cup-100.png">
             </div>
             
     </div>
 </section>
 
 <section class="hidden section" id="precos" >
-
-<h2>ola</h2>
+    <h2>preços</h2>
+        <div class="precos">
+            <div><h1>Site simples</h1><p>apenas visual com algumas funções em javascript, como direcionar o usuario.</p><p>preço: ...</p><button onclick="clickAlert()">Tenho Interesse</button></div>
+            <div><h1>Site com Animacoes</h1><p>site mais completo, com funções um pouco completas e animacoes em css e js.</p><p>preço: ...</p><button onclick="clickAlert()">Tenho Interesse</button></div>
+            <div><h1>Site completo com react</h1><p>site completo, com funções em js mais complexas e funções em react.</p><p>preço: ...</p><button onclick="clickAlert()">Tenho Interesse</button></div>
+        </div>
 </section>
 
 

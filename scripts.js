@@ -1,20 +1,14 @@
+function clickAlert(){
+    alert("Ainda em desenvolvimento!")
+}
+
+
+
 //animacao do site
+window.sr = ScrollReveal({reset: true});
 
-const element = document.querySelectorAll('.hidden')
+sr.reveal('.hidden', {duration: 1000})
 
-const observer = new IntersectionObserver ((entries) => {
-entries.forEach((entry) =>{
-    if (entry.isIntersecting === true){
-        entry.target.classList.add('show')
-    } else {
-        entry.target.classList.remove('show')
-    }
-}) 
-})
-
-element.forEach((element) =>    
-    observer.observe(element)
-)
 
 //rede sociais
 
@@ -57,3 +51,10 @@ links.forEach(link =>{
     console.log(link)
     
 })
+
+//aba de demo e git
+
+
+
+
+//aba de precos

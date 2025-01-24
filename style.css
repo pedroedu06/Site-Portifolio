@@ -6,13 +6,14 @@
 }
 
 body {
-    background: linear-gradient(90deg, #2F4F4F, #000000);
+    background-color: #000000;
     padding: 1.5rem;
     line-height: 1.5;
     font-family: "Poppins", sans-serif;
     color: #ffffff;
     margin: 50px;
 }
+
 
 /*nav bar*/
 
@@ -181,17 +182,7 @@ section{
 }
 
 .hidden {
-    opacity: 0;
-    filter: blur(15px);
-    transform: translateX(-100%);
-    transition: all 3s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-    transition: all 3s;
+    visibility: hidden;
 }
 
 /*Projetos*/
@@ -206,6 +197,7 @@ section{
     max-width: 1460px;
     margin: 0 auto;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .projetos p {
@@ -223,24 +215,32 @@ section{
     border-radius: 10px;
 }
 .projetos div  {
-    background-color: #FA8072;
+    background-color: ;
     height: 450px;
     width: 400px;
     margin: 47px;
     border-radius: 10px;
     border-style: solid;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.6);
+    flex: 1 1 200px;
 }
 
 .projetos button {
     margin: 50px;
     height: 50px;
     width: 80px;
-    background-color: #ffffff;
+    color: white;
+    background-color: #531853;
     font-weight: bold;
     cursor: pointer;
+    transition: .3s;
 }
 
+.projetos button:hover,
+.projetos button:focus {
+    outline: none;
+    background-color: #a027a0;
+}
 
 /*sobre min*/
 .fotoPedro {
@@ -272,6 +272,7 @@ section{
     border-radius: 15px;
     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.6);
     margin: 0 auto;
+    padding: 45px;
 }
 
 .habilits p {
@@ -359,6 +360,53 @@ section{
 }
 
 .form-message button:hover, .form-message button:focus {
+    outline: none;
+    background-color: #a027a0;
+}
+
+
+/*precos*/
+
+.precos {
+    background-color: #ffffff;
+    max-width: 1200px;
+    color: #000000;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 20px;
+    border-bottom: thin solid rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.precos div {
+    padding: 20px 32px;
+    margin: 10px;
+    width: 400px;
+    height: 500px;
+}
+
+.precos p {
+    font-size: 20px;
+}
+
+.precos h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+.precos button {
+    margin: 20px;
+    width: 150px;
+    height: 70px;
+    font-size: 20px;
+    background-color: #531853;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.precos button:focus,
+.precos button:hover {
     outline: none;
     background-color: #a027a0;
 }
