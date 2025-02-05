@@ -3,11 +3,15 @@ function clickAlert(){
 }
 
 
+function goPizza() {
+    window.location.href = "https://github.com/pedroedu06/Pizza-Maker-"
+}
+
 
 //animacao do site
 window.sr = ScrollReveal({reset: true});
 
-sr.reveal('.hidden', {duration: 1000})
+sr.reveal('.hidden', {duration: 2000})
 
 
 //rede sociais

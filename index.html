@@ -15,24 +15,24 @@
 <body>
     
     <nav class="navbar">
-        <span class="logo"> Dev.</span>
+        <span class="logo">DEV.</span>
         <ul><a href="#home" class="js-link">Home </a></ul>
         <ul><a href="#projetos" class="js-link">Projetos</a></ul>
         <ul><a href="#sobre" class="js-link">Sobre</a></ul>
-        <ul><a href="#interesses" class="js-link">Interesses</a></ul>
-        <ul><a href="#precos" class="js-link">Preços</a></ul>
+        <ul><a href="#interesses" class="js-link">Habilidades</a></ul>
         <a href="#contato" class="contato js-link">Contato</a>
     </nav>
 
     <!--Cabecario-->
+
 <section id="home" class="section">
-    <div id="header">
+    <div class="header">
         <h1 class="msg">Olá! Meu nome e Pedro Eduardo.</h1>
         <p class="msg2">Bem vindo ao meu site!</p>
         <div class="redesociais">
-        <ul onclick="github()"><img src="imagens/icons8-github-64.png" class="git"></ul>
-        <ul onclick="insta()"><img src="imagens/icons8-instagram-64.png" alt="" class="insta"></ul>
-        <ul onclick="linked()"><img src="imagens/icons8-linkedin-64.png" alt="" class="linkedin"></ul>
+        <ul onclick="github()"><img src="assets/icons8-github-64.png" class="git"></ul>
+        <ul onclick="insta()"><img src="assets/icons8-instagram-64.png" alt="" class="insta"></ul>
+        <ul onclick="linked()"><img src="assets/icons8-linkedin-64.png" alt="" class="linkedin"></ul>
     </div>
 </section>
 
@@ -42,19 +42,22 @@
         <div>
             <p>Projeto em produção</p>
             <img src="https://www.umbuzeiro.pb.gov.br/images/IMAGENS/em_breve.jpg">
+            <p>asdadad</p>
             <button onclick="clickAlert()">Github</button>
             <button onclick="clickAlert()">Ver demo</button>
         </div>
         <div>
             <p>Projeto em produção</p>
-            <img src="https://www.umbuzeiro.pb.gov.br/images/IMAGENS/em_breve.jpg" > 
+            <img src="https://www.umbuzeiro.pb.gov.br/images/IMAGENS/em_breve.jpg" >
+            <p>asdasd</p> 
             <button onclick="clickAlert()">Github</button>
             <button onclick="clickAlert()">Ver demo</button>
         </div>
         <div>
-            <p>Projeto em produção</p>
-            <img src="https://www.umbuzeiro.pb.gov.br/images/IMAGENS/em_breve.jpg">
-            <button onclick="clickAlert()">Github</button>
+            <p>Pizza Maker</p>
+            <img src="assets/pizza.png">
+            <p>Projeto inspirado no famoso Cookie Clicker!</p>
+            <button onclick="goPizza()">Github</button>
             <button onclick="clickAlert()">Ver demo</button>
         </div>
     </div>
@@ -62,46 +65,51 @@
 
 <section class="hidden section" id="sobre">
     <h2>Sobre mim</h2>
-    <img src="imagens/foto perfilaasdad.jpg" class="fotoPedro">
-    <p class="sobreMin">Olá! Meu nome e Pedro Eduardo e sou estudante em Engenharia de Software</p>
-</section>
-
-<section class="hidden section" id="interesses" >
-    <h2>Interesses e Habilidades</h2>
-    <div class="habilits">
-        <div>
-            <p>Aqui estao algumas habilidades e interesses que eu tenho dentro da area da tecnologia, sempre aprendendo coisas novas e descobindo novas tecnologias.</p>
-        </div>
-        <img src="imagens/icons8-traço-100.png">
-        <h1>Habilidades:</h1> 
-        <div class="icons">
-            <img src="imagens/icons8-html-5-100.png">
-            <img src="imagens/icons8-css-100.png">
-            <img src="imagens/icons8-javascript-100.png">
-            <img src="imagens/icons8-react-96.png">
-            <img src="imagens/icons8-mysql-100.png">
-            <img src="imagens/icons8-github-100.png">
-            <img src="imagens/icons8-visual-studio-100.png">
-        </div>
-        <h1>Interesses</h1>
-            <div class="icons">
-                <img src="imagens/icons8-android-studio-100.png">
-                <img src="imagens/icons8-kotlin-100.png">
-                <img src="imagens/icons8-ai-100.png">
-                <img src="imagens/icons8-php-100.png">
-                <img src="imagens/icons8-logo-java-coffee-cup-100.png">
-            </div>
-            
+    <div class="sobre">
+        <img src="assets/foto perfilaasdad.jpg" class="fotopedro">
+        <p class="sobremin"> Olá, esse sou eu, desenvolvedor web sempre buscando aprender mais e mais.</p>
     </div>
-</section>
-
-<section class="hidden section" id="precos" >
-    <h2>preços</h2>
-        <div class="precos">
-            <div><h1>Site simples</h1><p>apenas visual com algumas funções em javascript, como direcionar o usuario.</p><p>preço: ...</p><button onclick="clickAlert()">Tenho Interesse</button></div>
-            <div><h1>Site com Animacoes</h1><p>site mais completo, com funções um pouco completas e animacoes em css e js.</p><p>preço: ...</p><button onclick="clickAlert()">Tenho Interesse</button></div>
-            <div><h1>Site completo com react</h1><p>site completo, com funções em js mais complexas e funções em react.</p><p>preço: ...</p><button onclick="clickAlert()">Tenho Interesse</button></div>
+    <div class="resumo">   
+        <ul><img src="assets/icons8-local-24 (1).png"> - Brasilia-DF</ul>
+        <ul><img src="assets/icons8-faculdade-24 (1).png"> - Cursando Engenharia de Software</ul>
+        <ul><img src="assets/icons8-circular-dos-eua-24.png"> - Ingles Avançado</ul>
+        <ul><img src="assets/icons8-desenvolvedor-24.png"> - Atualmente desenvolvedor Web</ul>   
+    </div>
+    <div class="cv">
+        <button>Download CV</button>
+    </div>
+    </section>
+   
+<section class="hidden section" id="interesses" >
+        <h2>Habilidades</h2>
+    <div class="habilits">
+        <p>Aqui estao algumas habilidades e interesses que eu tenho dentro da area da tecnologia, sempre aprendendo coisas novas e descobindo novas tecnologias.</p> 
+        <div>
+            <img src="assets/icons8-html-5-100.png" alt="">
+            <h4>HTML5</h4>
+            <p>Primeira ferramente que aprendi, e sempre ultilizo nos meus projetos.</p>
         </div>
+        <div>
+            <img src="assets/icons8-logo-java-coffee-cup-100.png" alt="">
+            <h4>Java</h4>
+            <p>Ainda to aprendendo essa linguagem, mas ja estou em praticando com a mesma e pretendo trabalhar com ela.</p>
+        </div>
+        <div>
+            <img src="assets/icons8-javascript-100.png" alt="">
+            <h4>JavaScript</h4>
+            <p>Primeira linguagem seria que aprendir, sempre busco praticar ela ainda mais.</p>
+        </div>
+        <div>
+            <img src="assets/icons8-mysql-100.png" alt="">
+            <h4>SQL</h4>
+            <p>Linguaguem que ainda estou aprendendo.</p>
+        </div>
+        <div>
+            <img src="assets/icons8-react-96.png" alt="">
+            <h4>ReactJs</h4>
+            <p>Ainda sou leigo nessa linguagem, porem ja pratico em varios projetos.</p>
+        </div>
+    </div>
 </section>
 
 
