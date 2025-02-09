@@ -264,16 +264,14 @@ section{
 
 .resumo {
     display: table-column;
-    position: absolute;
-    top: 263%;
-    left: 36%;
+    margin-top: -600px;
+    margin-left:-151px ;
 }
 
 .cv {
     display: block;
-    position: absolute;
-    top: 289%;
-    left: 38.3%;
+    margin-top: -300px;
+    margin-left:-310px ;
 }
 .cv button {
     background-color: #531853;
