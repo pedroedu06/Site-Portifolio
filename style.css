@@ -1,5 +1,5 @@
-::after
-::before {
+*::after
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -417,4 +417,74 @@ section{
 .form-message button:hover, .form-message button:focus {
     outline: none;
     background-color: #a027a0;
+}
+
+
+@media screen and (max-width: 1195px) {
+    .navbar {
+        visibility: hidden;
+    }
+    section {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    body {
+        padding: 1.2rem;
+    }
+    h2 {
+        font-size: 30px;
+    }
+
+    
+    .projetos {
+        max-width: 350px;
+    }
+    .projetos div {
+        margin: 30px;
+    }
+    .habilits {
+        max-width: 350px;
+    }
+    .habilits p {
+        font-size: 20px;
+    }
+
+    .fotopedro {
+        width: 250px;
+    }
+
+    .sobre {
+        flex-direction: column;
+        margin: 30px 40px;
+    }
+    .sobre p {
+        font-size: 20px;
+        margin: 49px;
+    }
+    .resumo {
+        margin: 1px;
+    }
+    .cv {
+        margin: 40px;
+    }
+    .form-message {
+        max-width: 350px;
+    }
+    .form-message input {
+        width: 352px;
+        height: 98px;
+    }
+    .form-message input[name=subject] {
+        width: 349px;
+    }
+    .form-message textarea {
+        width: 340px;
+        height: 90px;
+    }
+    .form-message button {
+        width: 370px;
+        height: 70px;
+    }
 }

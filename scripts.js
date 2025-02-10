@@ -71,4 +71,3 @@ function downloadCurriculo(url, filename) {
 
 
 
-
