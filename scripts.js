@@ -2,9 +2,14 @@ function clickAlert(){
     alert("Ainda em desenvolvimento!")
 }
 
+// funcoes de click
 
 function goPizza() {
     window.location.href = "https://github.com/pedroedu06/Pizza-Maker-"
+}
+
+function goPizzaDemo() {
+    window.location.href = "https://pedroedu06.github.io/Pizza-Maker-/"
 }
 
 
