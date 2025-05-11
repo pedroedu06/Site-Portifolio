@@ -12,6 +12,22 @@ function goPizzaDemo() {
     window.location.href = "https://pedroedu06.github.io/Pizza-Maker-/"
 }
 
+function goDropZone() {
+    window.location.href = "https://github.com/pedroedu06/DropZone"
+}
+
+function goDropZoneDemo() {
+    window.location.href = "https://drop-zone-tan.vercel.app"
+}
+
+function goWeather() {
+    window.location.href = "https://github.com/pedroedu06/Weather-Check"
+}
+
+function goWeatherDemo() {
+    window.location.href = "https://weather-check-topaz.vercel.app"
+}
+
 
 //animacao do site
 window.sr = ScrollReveal({reset: true});
