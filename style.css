@@ -1,4 +1,5 @@
-*::after
+* ,
+*::after,
 *::before {
     margin: 0;
     padding: 0;
@@ -38,7 +39,7 @@ body {
 .contato:hover,
 .contato:focus {
     outline: none;
-    background-color: #a027a0; 
+    background-color: #a027a0;
 }
 
 .navbar {
@@ -46,14 +47,14 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #201f1f;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); 
-    border-bottom: 3px solid #000000; 
-    width: 100%; 
-    padding: 15px 0; 
-    position: fixed; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    border-bottom: 3px solid #000000;
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; 
+    z-index: 1000;
 }
 .navbar a {
     text-decoration: none;
@@ -76,7 +77,7 @@ body {
 body::after {
     content: '';
     display: block;
-    height: 80px; 
+    height: 80px;
 }
 
 /*header*/
@@ -84,7 +85,7 @@ body::after {
 .redesociais{
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .git{
@@ -103,7 +104,7 @@ body::after {
     overflow: hidden;
     transition: 1s;
     width: 100%;
-    
+
 }
 .linkedin:hover {
     transform: scale(1.5);
@@ -114,7 +115,7 @@ body::after {
     overflow: hidden;
     transition: 1s;
     width: 100%;
-    
+
 }
 .insta:hover {
     transform: scale(1.5);
@@ -149,7 +150,7 @@ body::after {
 }
 
 @keyframes write {
-    
+
     20% {
         width: 20ch;
     }
@@ -187,26 +188,71 @@ section{
 
 /*Projetos*/
 
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-btn {
+    background-color: #531853;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+}
+
+.carousel-btn:hover {
+    background-color: #a027a0;
+    transform: scale(1.1);
+}
+
 .projetos {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6);
-    width: 100%;
-    color: #000000;
     display: flex;
-    max-width: 1460px;
+    width: 1320px; 
+    color: #000000;
     margin: 0 auto;
     text-align: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px; 
+    padding: 20px; 
+    gap: 40px;
+    flex-shrink: 0;
 }
 
-.projetos p {
+.projetos::-webkit-scrollbar {
+    display: none;
+}
+
+.projectComponents p {
     font-size: 20px;
     color: #000000;
+    margin: 15px 0;
 }
 
-.projetos h1 {
-    font-size: 40px;
+.projectComponents p:first-child {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .projetos img {
@@ -216,30 +262,47 @@ section{
     border-bottom: thin solid rgba(0, 0, 0, 0.6);
     border-top: thin solid rgba(0, 0, 0, 0.6);
 }
-.projetos div  {
-    background-color: white ;
-    height: 510px;
+
+.projectComponents {
+    background-color: white;
+    height: 520px;
     width: 400px;
-    margin: 42px;
+    margin: 20px 0;
     border-radius: 10px;
-    border-style: solid;
+    border: 2px solid #000000;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.6);
-    flex: 1 1 200px;
+    flex: 0 0 400px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: flex-start;
 }
 
-.projetos button {
-    margin: 2px;
+.buttons-container {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.projectComponents button {
+    margin: 5px;
     height: 50px;
-    width: 80px;
+    min-width: 100px;
     color: white;
     background-color: #531853;
     font-weight: bold;
     cursor: pointer;
     transition: .3s;
+    border-radius: 5px;
+    border: none;
 }
 
-.projetos button:hover,
-.projetos button:focus {
+.projectComponents button:hover,
+.projectComponents button:focus {
     outline: none;
     background-color: #a027a0;
 }
@@ -288,8 +351,8 @@ section{
     outline: none;
     background-color: #a027a0;
 }
- 
-    
+
+
 
 
 /*habilits*/
@@ -428,7 +491,7 @@ section{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        
+
     }
     body {
         padding: 1.2rem;
@@ -437,12 +500,15 @@ section{
         font-size: 30px;
     }
 
-    
+
     .projetos {
         max-width: 350px;
     }
-    .projetos div {
+
+    .projectComponents {
         margin: 30px;
+        height: auto;
+        min-height: 550px;
     }
     .habilits {
         max-width: 350px;

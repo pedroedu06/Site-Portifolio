@@ -1,4 +1,4 @@
-function clickAlert(){
+function clickAlert() {
     alert("Ainda em desenvolvimento!")
 }
 
@@ -28,22 +28,29 @@ function goWeatherDemo() {
     window.location.href = "https://weather-check-topaz.vercel.app"
 }
 
+function goDownloadVideos() {
+    window.location.href = "https://github.com/pedroedu06/DownloadVideos"
+}
+
+function goEncurtador() {
+    window.location.href = ""
+}
 
 //animacao do site
-window.sr = ScrollReveal({reset: true});
+window.sr = ScrollReveal({ reset: true });
 
-sr.reveal('.hidden', {duration: 2000})
+sr.reveal('.hidden', { duration: 2000 })
 
 
 //rede sociais
 
 function insta() {
     window.location.href = "https://www.instagram.com/pedro.0_4/";
-} 
+}
 
-function github(){
+function github() {
     window.location.href = "https://github.com/pedroedu06";
-} 
+}
 
 function linked() {
     window.location.href = "https://www.linkedin.com/in/pedro-eduardo-dev/"
@@ -56,9 +63,9 @@ let section = document.querySelectorAll('.section')
 
 
 
-function scrollSection(event){
+function scrollSection(event) {
     event.preventDefault();
-    
+
     const href = event.currentTarget.getAttribute('href');
 
     const sections = document.querySelector(href)
@@ -71,17 +78,17 @@ function scrollSection(event){
 }
 
 
-links.forEach(link =>{
+links.forEach(link => {
     link.addEventListener('click', scrollSection)
     console.log(link)
-    
+
 })
 
 //donwloads 
 
 function downloadCurriculo(url, filename) {
 
-    
+
     const link = document.createElement('a');
     link.href = url;
     link.setAttribute("download", filename);
@@ -90,5 +97,19 @@ function downloadCurriculo(url, filename) {
     document.body.removeChild(link);
 }
 
-
-
+// Carrossel de Projetos (Movimento por Página/Seção)
+function moveCarousel(direction) {
+    const container = document.querySelector('.projetos');
+    const firstCard = container.querySelector('.projectComponents');
+    if (firstCard) {
+        const style = window.getComputedStyle(container);
+        const gap = parseInt(style.gap) || 0;
+        const cardWidth = firstCard.offsetWidth;
+        
+        // Salto fixo de 1320px para alinhar as seções (3 blocos de uma vez)
+        container.scrollBy({
+            left: direction * 1320, 
+            behavior: 'smooth'
+        });
+    }
+}

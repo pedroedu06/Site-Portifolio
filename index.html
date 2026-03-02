@@ -13,7 +13,7 @@
     <title>Portifolio</title>
 </head>
 <body>
-    
+
     <nav class="navbar">
         <span class="logo">DEV.</span>
         <ul><a href="#home" class="js-link">Home </a></ul>
@@ -25,108 +25,150 @@
 
     <!--Cabecario-->
 
-<section id="home" class="section">
-    <div class="header">
-        <h1 class="msg">Olá! Meu nome é Pedro Eduardo.</h1>
-        <p class="msg2">Bem vindo ao meu site!</p>
-        <div class="redesociais">
-        <ul onclick="github()"><img src="assets/icons8-github-64.png" class="git"></ul>
-        <ul onclick="insta()"><img src="assets/icons8-instagram-64.png" alt="" class="insta"></ul>
-        <ul onclick="linked()"><img src="assets/icons8-linkedin-64.png" alt="" class="linkedin"></ul>
-    </div>
-</section>
-
-<section class="hidden section" id="projetos">
-    <h2>Projetos</h2>
-    <div class="projetos">
-        <div>
-            <p>DropZone</p>
-            <img src="assets/drop zone photo.png">
-            <p>Site para upar arquivos em localhost, apenas estático por conta das limitações dos ambientes.<br> (Recomendo olhar git para mais informações)</p>
-            <button onclick="goDropZone()">Github</button>
-            <button onclick="goDropZoneDemo()">Ver demo</button>
-        </div>
-        <div>
-            <p>Weather Check!</p>
-            <img src="assets/Screenshot 2025-05-11 200727.png" >
-            <p>Site para verificar o clima em cidades via apis</p> 
-            <button onclick="goWeather()">Github</button>
-            <button onclick="goWeatherDemo()">Ver demo</button>
-        </div>
-        <div>
-            <p>Pizza Maker</p>
-            <img src="assets/pizza.png">
-            <p>Projeto inspirado no famoso Cookie Clicker!</p>
-            <button onclick="goPizza()">Github</button>
-            <button onclick="goPizzaDemo()">Ver demo</button>
-        </div>
-    </div>
-</section>
-
-<section class="hidden section" id="sobre">
-    <h2>Sobre mim</h2>
-    <div class="sobre">
-        <img src="assets/foto perfilaasdad.jpg" class="fotopedro">
-        <p class="sobremin"> Olá, esse sou eu, desenvolvedor web (Atualmente), sempre buscando aprender mais e mais.</p>
-    </div>
-    <div class="resumo">   
-        <ul><img src="assets/icons8-local-24 (1).png"> - Brasilia-DF</ul>
-        <ul><img src="assets/icons8-faculdade-24 (1).png"> - Cursando Engenharia de Software</ul>
-        <ul><img src="assets/icons8-circular-dos-eua-24.png"> - Inglês Avançado</ul>
-        <ul><img src="assets/icons8-desenvolvedor-24.png"> - Atualmente desenvolvedor Web</ul>   
-    </div>
-    <div class="cv">
-        <button onclick="downloadCurriculo('downloads/Curriculo.pdf', 'Curriculo.pdf')">Download CV</button>
-    </div>
+    <section id="home" class="section">
+        <div class="header">
+            <h1 class="msg">Olá! Meu nome é Pedro Eduardo.</h1>
+            <p class="msg2">Bem vindo ao meu site!</p>
+            <div class="redesociais">
+                <ul onclick="github()"><img src="assets/icons8-github-64.png" class="git"></ul>
+                <ul onclick="insta()"><img src="assets/icons8-instagram-64.png" alt="" class="insta"></ul>
+                <ul onclick="linked()"><img src="assets/icons8-linkedin-64.png" alt="" class="linkedin"></ul>
+            </div>
     </section>
-   
-<section class="hidden section" id="interesses" >
+
+    <section class="hidden section" id="projetos">
+        <h2>Projetos</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="projetos">
+                <div class="projectComponents">
+                    <p>DropZone</p>
+                    <img src="assets/drop zone photo.png">
+                    <p>Site para upar arquivos em localhost, apenas estático por conta das limitações dos ambientes.<br>
+                        (Recomendo olhar git para mais informações)</p>
+                    <div class="buttons-container">
+                        <button onclick="goDropZone()">Github</button>
+                        <button onclick="goDropZoneDemo()">Ver demo</button>
+                    </div>
+                </div>
+                <div class="projectComponents">
+                    <p>Weather Check!</p>
+                    <img src="assets/Screenshot 2025-05-11 200727.png">
+                    <p>Site para verificar o clima em cidades via apis</p>
+                    <div class="buttons-container">
+                        <button onclick="goWeather()">Github</button>
+                        <button onclick="goWeatherDemo()">Ver demo</button>
+                    </div>
+                </div>
+                <div class="projectComponents">
+                    <p>Pizza Maker</p>
+                    <img src="assets/pizza.png">
+                    <p>Meu primeiro projeto inspirado no famoso Cookie Clicker!</p>
+                    <div class="buttons-container">
+                        <button onclick="goPizza()">Github</button>
+                        <button onclick="goPizzaDemo()">Ver demo</button>
+                    </div>
+                </div>
+                <!-- Projetos Duplicados para o Carrossel -->
+                <div class="projectComponents">
+                    <p>Download de Videos</p>
+                    <img src="assets/download Files.png">
+                    <p>Um app de computador para baixar videos do youtube, usando yt-dlp e Redis.</p>
+                    <div class="buttons-container">
+                        <button onclick="goDownloadVideos()">Github</button>
+                        <button onclick="clickAlert()">Ver demo</button>
+                    </div>
+                </div>
+                <div class="projectComponents">
+                    <p>Projeto fullstack</p>
+                    <img src="https://www.catho.com.br/carreira-sucesso/wp-content/uploads/sites/3/2020/05/curriculo-para-auxiliar-de-producao.jpg">
+                    <p>em producao</p>
+                    <div class="buttons-container">
+                        <button onclick="clickAlert()">Github</button>
+                        <button onclick="clickAlert()">Ver demo</button>
+                    </div>
+                </div>
+                <div class="projectComponents">
+                    <p>Encurtador de URL</p>
+                    <img src="https://www.catho.com.br/carreira-sucesso/wp-content/uploads/sites/3/2020/05/curriculo-para-auxiliar-de-producao.jpg">
+                    <p>Em producao</p>
+                    <div class="buttons-container">
+                        <button onclick="clickAlert()">Github</button>
+                        <button onclick="clickAlert()">Ver demo</button>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="hidden section" id="sobre">
+        <h2>Sobre mim</h2>
+        <div class="sobre">
+            <img src="assets/foto perfilaasdad.jpg" class="fotopedro">
+            <p class="sobremin"> Olá, esse sou eu o Pedro, sou um futuro dev fullstack, sempre buscando aprender mais e mais.
+            </p>
+        </div>
+        <div class="resumo">
+            <ul><img src="assets/icons8-local-24 (1).png"> - Brasilia-DF</ul>
+            <ul><img src="assets/icons8-faculdade-24 (1).png"> - Cursando Engenharia de Software</ul>
+            <ul><img src="assets/icons8-circular-dos-eua-24.png"> - Inglês Avançado</ul>
+            <ul><img src="assets/icons8-desenvolvedor-24.png"> - Desenvolvedor </ul>
+        </div>
+        <div class="cv">
+            <button onclick="downloadCurriculo('downloads/Curriculo.pdf', 'Curriculo.pdf')">Download CV</button>
+        </div>
+    </section>
+
+    <section class="hidden section" id="interesses">
         <h2>Habilidades</h2>
-    <div class="habilits">
-        <p>Aqui estão algumas habilidades e interesses que eu tenho dentro da área da tecnologia, sempre aprendendo coisas novas e descobrindo novas tecnologias.</p> 
-        <div>
-            <img src="assets/icons8-html-5-100.png" alt="">
-            <h4>HTML5</h4>
-            <p>Primeira ferramenta que aprendi, e sempre ultilizo nos meus projetos.</p>
+        <div class="habilits">
+            <p>Aqui estão algumas habilidades e interesses que eu tenho dentro da área da tecnologia, sempre aprendendo
+                coisas novas e descobrindo novas tecnologias.</p>
+            <div>
+                <img src="assets/icons8-html-5-100.png" alt="">
+                <h4>HTML5</h4>
+                <p>Primeira ferramenta que aprendi, e sempre ultilizo nos meus projetos.</p>
+            </div>
+            <div>
+                <img src="assets/icons8-logo-java-coffee-cup-100.png" alt="">
+                <h4>Java</h4>
+                <p>Ainda estou aprendendo essa linguagem, mas já pratico pois pretendo trabalhar com ela.</p>
+            </div>
+            <div>
+                <img src="assets/icons8-javascript-100.png" alt="">
+                <h4>JavaScript</h4>
+                <p>Primeira linguagem que eu aprendi, sempre busco praticar ela ainda mais.</p>
+            </div>
+            <div>
+                <img src="assets/icons8-mysql-100.png" alt="">
+                <h4>SQL</h4>
+                <p>Linguaguem que ainda estou aprendendo.</p>
+            </div>
+            <div>
+                <img src="assets/icons8-react-96.png" alt="">
+                <h4>ReactJs</h4>
+                <p>Ainda sou leigo nessa linguagem, porém, pratico em vários projetos.</p>
+            </div>
         </div>
-        <div>
-            <img src="assets/icons8-logo-java-coffee-cup-100.png" alt="">
-            <h4>Java</h4>
-            <p>Ainda estou aprendendo essa linguagem, mas já pratico pois pretendo trabalhar com ela.</p>
-        </div>
-        <div>
-            <img src="assets/icons8-javascript-100.png" alt="">
-            <h4>JavaScript</h4>
-            <p>Primeira linguagem que eu aprendi, sempre busco praticar ela ainda mais.</p>
-        </div>
-        <div>
-            <img src="assets/icons8-mysql-100.png" alt="">
-            <h4>SQL</h4>
-            <p>Linguaguem que ainda estou aprendendo.</p>
-        </div>
-        <div>
-            <img src="assets/icons8-react-96.png" alt="">
-            <h4>ReactJs</h4>
-            <p>Ainda sou leigo nessa linguagem, porém, pratico em vários projetos.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
 
 <section class="hidden section" id="contato" >
-    <h2>Contato</h2>
+        <h2>Contato</h2>
 
-    <div class="form-message">
-        <h1 class="form-title">Entre em contato comigo!</h1>
-        <form action="https://formsubmit.co/pedro.nascimento182501@gmail.com" method="POST">
-        <input type="text" name="Nome" id="nome" placeholder="Nome" required>
-        <input type="email" name="email" id="email" placeholder="Email" required>
-        <input type="text" name="subject" placeholder="Assunto">
-        <textarea name="Mensagem" id="message" placeholder="Mensagem"></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-</div>
-</section>
+        <div class="form-message">
+            <h1 class="form-title">Entre em contato comigo!</h1>
+            <form action="https://formsubmit.co/pedro.nascimento182501@gmail.com" method="POST">
+                <input type="text" name="Nome" id="nome" placeholder="Nome" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="text" name="subject" placeholder="Assunto">
+                <textarea name="Mensagem" id="message" placeholder="Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
 
 </body>
 <script src="scripts.js"></script>
