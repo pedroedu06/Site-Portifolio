@@ -4,13 +4,10 @@ function clickAlert() {
 
 // funcoes de click
 
-function goPizza() {
-    window.location.href = "https://github.com/pedroedu06/Pizza-Maker-"
+function goEncurtador() {
+    window.location.href = "https://github.com/pedroedu06/Encurtador-de-url"
 }
 
-function goPizzaDemo() {
-    window.location.href = "https://pedroedu06.github.io/Pizza-Maker-/"
-}
 
 function goDropZone() {
     window.location.href = "https://github.com/pedroedu06/DropZone"
@@ -24,16 +21,17 @@ function goWeather() {
     window.location.href = "https://github.com/pedroedu06/Weather-Check"
 }
 
-function goWeatherDemo() {
-    window.location.href = "https://weather-check-topaz.vercel.app"
-}
 
 function goDownloadVideos() {
     window.location.href = "https://github.com/pedroedu06/DownloadVideos"
 }
 
 function goEncurtador() {
-    window.location.href = ""
+    window.location.href = "https://github.com/pedroedu06/Encurtador-de-url"
+}
+
+function goLatex() {
+    window.location.href = "https://github.com/pedroedu06/app-de-compilar-latex"
 }
 
 //animacao do site
