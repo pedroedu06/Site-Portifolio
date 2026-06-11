@@ -2,168 +2,267 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="assets/teste.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" type="x-icon" href="assets/teste.png">
+    <title>Pedro Eduardo · Dev</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <title>Portifolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;family=Space+Mono:wght@400;700&amp;family=IBM+Plex+Mono:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body.no-confetti .confetti { display: none; }
+      body.no-grid::before { display: none; }
+    </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <span class="logo">DEV.</span>
-        <ul><a href="#home" class="js-link">Home </a></ul>
-        <ul><a href="#projetos" class="js-link">Projetos</a></ul>
-        <ul><a href="#sobre" class="js-link">Sobre</a></ul>
-        <ul><a href="#interesses" class="js-link">Habilidades</a></ul>
-        <a href="#contato" class="contato js-link">Contato</a>
+        <a href="#home" class="logo js-link">pedro<span class="accent">.dev</span><span class="cursor-blink"></span></a>
+        <ul class="nav-links">
+            <li><a href="#home" class="js-link" data-i18n="nav_home">home</a></li>
+            <li><a href="#projetos" class="js-link" data-i18n="nav_projects">projetos</a></li>
+            <li><a href="#sobre" class="js-link" data-i18n="nav_about">sobre</a></li>
+            <li><a href="#habilidades" class="js-link" data-i18n="nav_skills">habilidades</a></li>
+        </ul>
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="pt" title="Português">
+                <svg width="20" height="14" viewBox="0 0 20 14"><rect width="20" height="14" fill="#009C3B"></rect><polygon points="10,1.5 18.5,7 10,12.5 1.5,7" fill="#FFDF00"></polygon><circle cx="10" cy="7" r="3" fill="#002776"></circle></svg>
+                PT
+            </button>
+            <button class="lang-btn" data-lang="en" title="English">
+                <svg width="20" height="14" viewBox="0 0 20 14"><rect width="20" height="14" fill="#B22234"></rect><rect y="2" width="20" height="1.6" fill="#FAF9F6"></rect><rect y="5.2" width="20" height="1.6" fill="#FAF9F6"></rect><rect y="8.4" width="20" height="1.6" fill="#FAF9F6"></rect><rect y="11.6" width="20" height="1.6" fill="#FAF9F6"></rect><rect width="9" height="7" fill="#3C3B6E"></rect></svg>
+                EN
+            </button>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema" title="Tema claro / escuro">
+            <span class="knob">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+            </span>
+        </button>
+        <a href="#contato" class="btn-contato js-link" data-i18n="nav_contact">Contato</a>
     </nav>
 
-    <!--Cabecario-->
-
-    <section id="home" class="section">
-        <div class="header">
-            <h1 class="msg">Olá! Meu nome é Pedro Eduardo.</h1>
-            <p class="msg2">Bem vindo ao meu site!</p>
-            <div class="redesociais">
-                <ul onclick="github()"><img src="assets/icons8-github-64.png" class="git"></ul>
-                <ul onclick="insta()"><img src="assets/icons8-instagram-64.png" alt="" class="insta"></ul>
-                <ul onclick="linked()"><img src="assets/icons8-linkedin-64.png" alt="" class="linkedin"></ul>
+    <main>
+        <section id="home" class="hero" data-screen-label="Hero">
+            <div class="confetti"></div>
+            <div class="hero-inner">
+                <span class="hero-tag" data-i18n="hero_tag">FullStack Developer</span>
+                <h1><span data-i18n="hero_hello">Olá, eu sou o</span><br><span class="gradient-name">Pedro Eduardo</span></h1>
+                <p class="typeline"><span class="prompt">~$</span> <span class="typed" id="typed-text"></span><span class="caret"></span></p>
+                <div class="hero-social">
+                    <a href="https://github.com/pedroedu06" target="_blank" rel="noopener" title="GitHub"><img src="assets/icons8-github-64.png" alt="GitHub"></a>
+                    <a href="https://www.instagram.com/pedro.0_4/" target="_blank" rel="noopener" title="Instagram"><img src="assets/icons8-instagram-64.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/pedro-eduardo-dev/" target="_blank" rel="noopener" title="LinkedIn"><img src="assets/icons8-linkedin-64.png" alt="LinkedIn"></a>
+                </div>
             </div>
-    </section>
+            <span class="scroll-hint" data-i18n="scroll_hint">↓ scroll</span>
+        </section>
 
-    <section class="hidden section" id="projetos">
-        <h2>Projetos</h2>
-        <div class="carousel-container">
-            <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
-            <div class="projetos">
-                <div class="projectComponents">
-                    <p>DropZone</p>
-                    <img src="assets/drop zone photo.png">
-                    <p>Site para upar arquivos em localhost, apenas estático por conta das limitações dos ambientes.<br>
-                        (Recomendo olhar git para mais informações)</p>
-                    <div class="buttons-container">
-                        <button onclick="goDropZone()">Github</button>  
+        <div class="zigzag"></div>
+
+        <section id="projetos" class="section" data-screen-label="Projetos">
+            <div class="section-head reveal">
+                <span class="hash">#</span>
+                <h2 data-i18n="sec_projects">projetos</h2>
+                <span class="comment" data-i18n="sec_projects_comment">// coisas que eu construí</span>
+            </div>
+            <p class="section-sub reveal" data-delay="1" data-i18n="sec_projects_sub">Uma seleção dos meus projetos.</p>
+
+            <div class="carousel-wrap reveal" data-delay="2">
+                <div class="carousel">
+                    <article class="term-card">
+                        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">pedro@dev:~/projetos/dropzone</span></div>
+                        <img class="shot" src="assets/drop zone photo.png" alt="DropZone">
+                        <div class="term-body">
+                            <h3><span class="dollar">$</span>DropZone</h3>
+                            <p data-i18n="p1_desc">Site para upload de arquivos em localhost.</p>
+                            <div class="term-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                            <div class="term-actions">
+                                <a class="btn-ghost" href="https://github.com/pedroedu06/DropZone" target="_blank" rel="noopener" data-i18n="btn_github">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="term-card">
+                        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">pedro@dev:~/projetos/weather-check</span></div>
+                        <img class="shot" src="assets/Screenshot 2025-05-11 200727.png" alt="Weather Check">
+                        <div class="term-body">
+                            <h3><span class="dollar">$</span>Weather Check!</h3>
+                            <p data-i18n="p2_desc">Aplicação que consulta o clima em tempo real.</p>
+                            <div class="term-tags"><span>JavaScript</span><span>API</span></div>
+                            <div class="term-actions">
+                                <a class="btn-ghost" href="https://github.com/pedroedu06/Weather-Check" target="_blank" rel="noopener" data-i18n="btn_github">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="term-card">
+                        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">pedro@dev:~/projetos/encurtador</span></div>
+                        <img class="shot" src="assets/encurtador de links.png" alt="Encurtador de links">
+                        <div class="term-body">
+                            <h3><span class="dollar">$</span>Encurtador de Links</h3>
+                            <p data-i18n="p3_desc">Sistema em TypeScript para encurtar URLs.</p>
+                            <div class="term-tags"><span>TypeScript</span><span>Node</span></div>
+                            <div class="term-actions">
+                                <a class="btn-ghost" href="https://github.com/pedroedu06/Encurtador-de-url" target="_blank" rel="noopener" data-i18n="btn_github">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="term-card">
+                        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">pedro@dev:~/projetos/download-videos</span></div>
+                        <img class="shot" src="assets/download Files.png" alt="Download de Vídeos">
+                        <div class="term-body">
+                            <h3><span class="dollar">$</span>Download de Vídeos</h3>
+                            <p data-i18n="p4_desc">App desktop para baixar vídeos do YouTube.</p>
+                            <div class="term-tags"><span>yt-dlp</span><span>Redis</span></div>
+                            <div class="term-actions">
+                                <a class="btn-ghost" href="https://github.com/pedroedu06/DownloadVideos" target="_blank" rel="noopener" data-i18n="btn_github">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="term-card">
+                        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">pedro@dev:~/projetos/latex-compiler</span></div>
+                        <img class="shot" src="assets/latex.png" alt="Compilador de LaTeX">
+                        <div class="term-body">
+                            <h3><span class="dollar">$</span>Compilador de LaTeX</h3>
+                            <p data-i18n="p5_desc">Aplicativo portátil para documentos LaTeX.</p>
+                            <div class="term-tags"><span>Desktop</span><span>LaTeX</span></div>
+                            <div class="term-actions">
+                                <a class="btn-ghost" href="https://github.com/pedroedu06/app-de-compilar-latex" target="_blank" rel="noopener" data-i18n="btn_github">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="term-card">
+                        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title" data-i18n="p6_title">ml-em-c</span></div>
+                        <img class="shot" src="assets/icons8-ai-100.png" alt="Machine Learning em C" style="object-fit: contain; padding: 40px; background: var(--ink);">
+                        <div class="term-body">
+                            <h3><span class="dollar">$</span>Machine Learning em C</h3>
+                            <p data-i18n="p6_desc">Machine Learning implementado do zero em C.</p>
+                            <div class="term-tags"><span>C</span><span>ML</span></div>
+                            <div class="term-actions">
+                                <button class="btn-ghost" onclick="wipAlert()" data-i18n="wip">em breve</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-btn" onclick="moveCarousel(-1)" aria-label="Anterior">&#60;</button>
+                    <button class="carousel-btn" onclick="moveCarousel(1)" aria-label="Próximo">&#62;</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="zigzag"></div>
+
+        <section id="sobre" class="section" data-screen-label="Sobre">
+            <div class="section-head reveal">
+                <span class="hash">#</span>
+                <h2 data-i18n="sec_about">sobre mim</h2>
+                <span class="comment" data-i18n="sec_about_comment">// quem está por trás do código</span>
+            </div>
+            <div class="sobre-grid">
+                <div class="foto-frame reveal" data-delay="1">
+                    <img src="assets/foto perfilaasdad.jpg" alt="Foto do Pedro">
+                </div>
+                <div class="sobre-text reveal" data-delay="2">
+                    <p class="bio"><span data-i18n="about_bio_1">Olá! Esse sou eu, o </span><span class="accent" data-i18n="about_bio_2">Pedro</span><span data-i18n="about_bio_3">. Futuro dev fullstack, movido por curiosidade.</span></p>
+                    <ul class="fact-list">
+                        <li><img src="assets/icons8-local-24 (1).png" alt=""><span class="key" data-i18n="fact_loc_k">local:</span><span data-i18n="fact_loc_v">Brasília — DF</span></li>
+                        <li><img src="assets/icons8-faculdade-24 (1).png" alt=""><span class="key" data-i18n="fact_edu_k">formação:</span><span data-i18n="fact_edu_v">Cursando Engenharia de Software</span></li>
+                        <li><img src="assets/icons8-circular-dos-eua-24.png" alt=""><span class="key" data-i18n="fact_lang_k">inglês:</span><span data-i18n="fact_lang_v">Avançado</span></li>
+                        <li><img src="assets/icons8-desenvolvedor-24.png" alt=""><span class="key" data-i18n="fact_role_k">função:</span><span data-i18n="fact_role_v">Desenvolvedor</span></li>
+                    </ul>
+                    <button class="btn-solid" onclick="downloadCurriculo('downloads/Curriculo.pdf', 'Curriculo.pdf')"><span data-i18n="btn_cv">Download CV</span> ↓</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="zigzag"></div>
+
+        <section id="habilidades" class="section" data-screen-label="Habilidades">
+            <div class="section-head reveal">
+                <span class="hash">#</span>
+                <h2 data-i18n="sec_skills">habilidades</h2>
+                <span class="comment" data-i18n="sec_skills_comment">// minha stack</span>
+            </div>
+            <p class="section-sub reveal" data-delay="1" data-i18n="sec_skills_sub">Tecnologias que eu uso e estudo no dia a dia.</p>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <h4>JavaScript</h4>
+                    <span class="lvl" data-i18n="sk_js_lvl">[████████░░]</span>
+                    <p data-i18n="sk_js">Primeira linguagem que aprendi.</p>
+                </div>
+                <div class="skill-card reveal" data-delay="1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                    <h4>TypeScript</h4>
+                    <span class="lvl" data-i18n="sk_ts_lvl">[███████░░░]</span>
+                    <p data-i18n="sk_ts">JavaScript com tipagem.</p>
+                </div>
+                <div class="skill-card reveal" data-delay="2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Golang">
+                    <h4>Golang</h4>
+                    <span class="lvl" data-i18n="sk_go_lvl">[██████░░░░]</span>
+                    <p data-i18n="sk_go">Backends rápidos e eficientes.</p>
+                </div>
+                <div class="skill-card reveal" data-delay="3">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                    <h4>ReactJs</h4>
+                    <span class="lvl" data-i18n="sk_react_lvl">[██████░░░░]</span>
+                    <p data-i18n="sk_react">Já uso em vários projetos.</p>
+                </div>
+                <div class="skill-card reveal" data-delay="1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                    <h4>Docker</h4>
+                    <span class="lvl" data-i18n="sk_docker_lvl">[██████░░░░]</span>
+                    <p data-i18n="sk_docker">Containers para dev e deploy.</p>
+                </div>
+                <div class="skill-card reveal" data-delay="2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                    <h4>PostgreSQL</h4>
+                    <span class="lvl" data-i18n="sk_pg_lvl">[██████░░░░]</span>
+                    <p data-i18n="sk_pg">Meu banco relacional preferido.</p>
+                </div>
+                <div class="skill-card reveal" data-delay="3">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
+                    <h4>Redis</h4>
+                    <span class="lvl" data-i18n="sk_redis_lvl">[█████░░░░░]</span>
+                    <p data-i18n="sk_redis">Cache e filas.</p>
+                </div>
+                <div class="skill-card reveal" data-delay="1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS">
+                    <h4>AWS</h4>
+                    <span class="lvl" data-i18n="sk_aws_lvl">[█████░░░░░]</span>
+                    <p data-i18n="sk_aws">Infra e deploy na nuvem.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="zigzag"></div>
+
+        <section id="contato" class="section" data-screen-label="Contato">
+            <div class="section-head reveal">
+                <span class="hash">#</span>
+                <h2 data-i18n="sec_contact">contato</h2>
+                <span class="comment" data-i18n="sec_contact_comment">// vamos conversar</span>
+            </div>
+            <div class="contact-shell reveal" data-delay="1">
+                <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">pedro@dev:~/contato — bash</span></div>
+                <div class="contact-bar">
+                    <span class="contact-label"><span data-i18n="contact_label">Contatos</span> →</span>
+                    <div class="contact-links">
+                        <a class="pill-btn pill-gmail" href="https://mail.google.com/mail/?view=cm&amp;to=pedro.nascimento182501@gmail.com" target="_blank" rel="noopener">Gmail ↗</a>
+                        <a class="pill-btn pill-linkedin" href="https://www.linkedin.com/in/pedro-eduardo-dev/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                        <a class="pill-btn pill-github" href="https://github.com/pedroedu06" target="_blank" rel="noopener">GitHub ↗</a>
                     </div>
                 </div>
-                <div class="projectComponents">
-                    <p>Weather Check!</p>
-                    <img src="assets/Screenshot 2025-05-11 200727.png">
-                    <p>Site para verificar o clima em cidades via apis</p>
-                    <div class="buttons-container">
-                        <button onclick="goWeather()">Github</button>
-                    </div>
-                </div>
-                <div class="projectComponents">
-                    <p>Encurtador de links</p>
-                    <img src="assets/encurtador de links.png">
-                    <p>Sistema feito em Typescript para encurtar URLs de forma rapida</p>
-                    <div class="buttons-container">
-                        <button onclick="goEncurtador()">Github</button>
-                    </div>
-                </div>
-                <!-- Projetos Duplicados para o Carrossel -->
-                <div class="projectComponents">
-                    <p>Download de Videos</p>
-                    <img src="assets/download Files.png">
-                    <p>Um app de computador para baixar videos do youtube, usando yt-dlp e Redis.</p>
-                    <div class="buttons-container">
-                        <button onclick="goDownloadVideos()">Github</button>
-                    </div>
-                </div>
-                <div class="projectComponents">
-                    <p>App de compilador de Latex</p>
-                    <img src="assets/latex.png">
-                    <p>Aplicativo portatil para criar documentos em Latex</p>
-                    <div class="buttons-container">
-                        <button onclick="goLatex()">Github</button>
-                    </div>
-                </div>
-                <div class="projectComponents">
-                    <p>Machine Learning em C</p>
-                    <img src="https://www.catho.com.br/carreira-sucesso/wp-content/uploads/sites/3/2020/05/curriculo-para-auxiliar-de-producao.jpg">
-                    <p>Em producao</p>
-                    <div class="buttons-container">
-                        <button onclick="clickAlert()">Github</button>
-                    </div>
-                </div>
-                
             </div>
-            <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section class="hidden section" id="sobre">
-        <h2>Sobre mim</h2>
-        <div class="sobre">
-            <img src="assets/foto perfilaasdad.jpg" class="fotopedro">
-            <p class="sobremin"> Olá, esse sou eu o Pedro, sou um futuro dev fullstack, sempre buscando aprender mais e mais.
-            </p>
-        </div>
-        <div class="resumo">
-            <ul><img src="assets/icons8-local-24 (1).png"> - Brasilia-DF</ul>
-            <ul><img src="assets/icons8-faculdade-24 (1).png"> - Cursando Engenharia de Software</ul>
-            <ul><img src="assets/icons8-circular-dos-eua-24.png"> - Inglês Avançado</ul>
-            <ul><img src="assets/icons8-desenvolvedor-24.png"> - Desenvolvedor </ul>
-        </div>
-        <div class="cv">
-            <button onclick="downloadCurriculo('downloads/Curriculo.pdf', 'Curriculo.pdf')">Download CV</button>
-        </div>
-    </section>
+    <footer>
+        <span data-i18n="footer">Feito com <span class="heart">♥</span> por Pedro Eduardo · Brasília — DF</span>
+    </footer>
 
-    <section class="hidden section" id="interesses">
-        <h2>Habilidades</h2>
-        <div class="habilits">
-            <p>Aqui estão algumas habilidades e interesses que eu tenho dentro da área da tecnologia, sempre aprendendo
-                coisas novas e descobrindo novas tecnologias.</p>
-            <div>
-                <img src="assets/icons8-html-5-100.png" alt="">
-                <h4>HTML5</h4>
-                <p>Primeira ferramenta que aprendi, e sempre ultilizo nos meus projetos.</p>
-            </div>
-            <div>
-                <img src="assets/icons8-logo-java-coffee-cup-100.png" alt="">
-                <h4>Java</h4>
-                <p>Ainda estou aprendendo essa linguagem, mas já pratico pois pretendo trabalhar com ela.</p>
-            </div>
-            <div>
-                <img src="assets/icons8-javascript-100.png" alt="">
-                <h4>JavaScript</h4>
-                <p>Primeira linguagem que eu aprendi, sempre busco praticar ela ainda mais.</p>
-            </div>
-            <div>
-                <img src="assets/icons8-mysql-100.png" alt="">
-                <h4>SQL</h4>
-                <p>Linguaguem que ainda estou aprendendo.</p>
-            </div>
-            <div>
-                <img src="assets/icons8-react-96.png" alt="">
-                <h4>ReactJs</h4>
-                <p>Ainda sou leigo nessa linguagem, porém, pratico em vários projetos.</p>
-            </div>
-        </div>
-    </section>
-
-
-<section class="hidden section" id="contato" >
-        <h2>Contato</h2>
-
-        <div class="form-message">
-            <h1 class="form-title">Entre em contato comigo!</h1>
-            <form action="https://formsubmit.co/pedro.nascimento182501@gmail.com" method="POST">
-                <input type="text" name="Nome" id="nome" placeholder="Nome" required>
-                <input type="email" name="email" id="email" placeholder="Email" required>
-                <input type="text" name="subject" placeholder="Assunto">
-                <textarea name="Mensagem" id="message" placeholder="Mensagem"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
-
+    <script src="scripts.js"></script>
 </body>
-<script src="scripts.js"></script>
 </html>
